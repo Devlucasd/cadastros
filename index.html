@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Social - Conecte-se através de Hobbies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>XYZ Social</h1>
+        <nav>
+            <a href="#" id="profile-link">Perfil</a>
+            <a href="#" id="groups-link">Grupos</a>
+            <a href="#" id="logout-link">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <p>Não tem uma conta? <a href="#" id="register-link">Cadastre-se</a></p>
+        </section>
+
+        <section id="register-section" style="display:none;">
+            <h2>Cadastro</h2>
+            <form id="register-form">
+                <input type="text" id="name" placeholder="Nome Completo" required>
+                <input type="email" id="reg-email" placeholder="E-mail" required>
+                <input type="password" id="reg-password" placeholder="Senha" required>
+                <input type="text" id="hobbies" placeholder="Hobbies (separados por vírgula)" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="#" id="login-link">Faça login</a></p>
+        </section>
+
+        <section id="profile-section" style="display:none;">
+            <h2>Perfil</h2>
+            <p id="profile-name"></p>
+            <p><strong>Hobbies:</strong> <span id="profile-hobbies"></span></p>
+            <button id="edit-profile">Editar Perfil</button>
+            <button id="delete-profile">Excluir Conta</button>
+        </section>
+
+        <section id="groups-section" style="display:none;">
+            <h2>Grupos</h2>
+            <div id="group-list">
+                <!-- Grupos serão gerados aqui -->
+            </div>
+            <button id="create-group">Criar Novo Grupo</button>
+        </section>
+
+        <section id="chat-section" style="display:none;">
+            <h2>Chat - <span id="chat-group-name"></span></h2>
+            <div id="chat-messages">
+                <!-- Mensagens do chat -->
+            </div>
+            <form id="chat-form">
+                <input type="text" id="chat-input" placeholder="Digite sua mensagem" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <button id="back-to-groups">Voltar aos Grupos</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
